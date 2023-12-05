@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.6945646, g: 0.71424234, b: 0.73262525, a: 1}
+  m_IndirectSpecularColor: {r: 0.4972335, g: 0.5758111, b: 0.65898997, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3212,7 +3212,7 @@ MonoBehaviour:
   OnToggle:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 494745401}
+      - m_Target: {fileID: 9191736079613732532}
         m_TargetAssemblyTypeName: AnimPanel, Lynx.Core
         m_MethodName: OpenPanel
         m_Mode: 1
@@ -3227,7 +3227,7 @@ MonoBehaviour:
   OnUntoggle:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 494745401}
+      - m_Target: {fileID: 9191736079613732532}
         m_TargetAssemblyTypeName: AnimPanel, Lynx.Core
         m_MethodName: ClosePanel
         m_Mode: 1
@@ -3893,6 +3893,7 @@ GameObject:
   - component: {fileID: 8557787312452189961}
   - component: {fileID: 1683925220939865524}
   - component: {fileID: 494745401}
+  - component: {fileID: 9191736079613732532}
   m_Layer: 0
   m_Name: XR Canvas
   m_TagString: Untagged
@@ -6557,3 +6558,20 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 1
   m_TargetDisplay: 0
+--- !u!114 &9191736079613732532
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7155247611406509257}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 591a82f024e9d9240a66493daf76bd60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetSize: {x: 0.179, y: 0.1122}
+  panelBG: {fileID: 1279194184203755264}
+  timeOfSlide: 0.66
+  easing: 11
+  colorButtons: {fileID: 7472962158768095926}

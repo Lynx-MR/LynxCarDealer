@@ -1,5 +1,7 @@
 {
   "dependencies": {
+    "com.lynx.core": "1.1.2",
+    "com.lynx.modules": "1.1.2",
     "com.ultraleap.tracking": "https://github.com/ultraleap/UnityPlugin.git?path=/Packages/Tracking",
     "com.ultraleap.tracking.preview": "6.12.1",
     "com.unity.2d.sprite": "1.0.0",
@@ -55,6 +57,13 @@
       "url": "https://package.openupm.com",
       "scopes": [
         "com.ultraleap"
+      ]
+    },
+    {
+      "name": "Lynx",
+      "url": "https://package.openupm.com",
+      "scopes": [
+        "com.lynx"
       ]
     }
   ]
