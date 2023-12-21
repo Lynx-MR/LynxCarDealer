@@ -130,6 +130,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3026110581007291143, guid: 45a203376e973c84982ad4b3e66e38f9, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3754637438355319722, guid: 45a203376e973c84982ad4b3e66e38f9, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6813579629457262034, guid: 45a203376e973c84982ad4b3e66e38f9, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7045917488772413147, guid: 45a203376e973c84982ad4b3e66e38f9, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -604,11 +616,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d864f1f7317725f49a59a1d41ecf4689, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetSize: {x: 0.179, y: 0.1122}
-  panelBG: {fileID: 1279194184203755264}
-  timeOfSlide: 0.66
-  easing: 11
-  colorButtons: {fileID: 7472962158768095926}
 --- !u!114 &494745402
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -622,9 +629,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   xrCamera: {fileID: 1398681339}
-  ARText: {fileID: 6041924628656370288}
-  VRText: {fileID: 1641743317284320866}
   VREnvironment: {fileID: 5616583306889310499}
+  ButtonArVr: {fileID: 7026473539431047852}
+  timeDisabled: 0.8
 --- !u!1001 &502251414
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2279,7 +2286,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_HandMenuUIGameObject: {fileID: 8399751810544384454}
-  m_MenuHandedness: 3
+  m_MenuHandedness: 1
   m_HandMenuUpDirection: 1
   m_LeftPalmAnchor: {fileID: 1802023705892461203}
   m_RightPalmAnchor: {fileID: 27238123655553620}
@@ -2309,7 +2316,7 @@ MonoBehaviour:
       allowSmoothing: 1
       followLowerSmoothingValue: 12
       followUpperSmoothingValue: 16
-    m_Variable: {fileID: 11400000, guid: e659faa044cc3c94c97894771c581244, type: 2}
+    m_Variable: {fileID: 11400000, guid: 6d78fc4254ff6cf4888facd3b76389a3, type: 2}
   m_ControllerFollowPreset:
     m_UseConstant: 0
     m_ConstantValue:
@@ -2592,10 +2599,34 @@ PrefabInstance:
       propertyPath: m_Name
       value: HandHintMenu
       objectReference: {fileID: 0}
+    - target: {fileID: 1445148952715339862, guid: feed920016ce87648b107ccd1c43522d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.67
+      objectReference: {fileID: 0}
+    - target: {fileID: 1445148952715339862, guid: feed920016ce87648b107ccd1c43522d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.873
+      objectReference: {fileID: 0}
+    - target: {fileID: 1445148952715339862, guid: feed920016ce87648b107ccd1c43522d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 3.648
+      objectReference: {fileID: 0}
     - target: {fileID: 1512948194862465586, guid: feed920016ce87648b107ccd1c43522d, type: 3}
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 1398681339}
+    - target: {fileID: 1512948194862465590, guid: feed920016ce87648b107ccd1c43522d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 3.59
+      objectReference: {fileID: 0}
+    - target: {fileID: 1512948194862465590, guid: feed920016ce87648b107ccd1c43522d, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 1.66
+      objectReference: {fileID: 0}
+    - target: {fileID: 1512948194862465590, guid: feed920016ce87648b107ccd1c43522d, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.9
+      objectReference: {fileID: 0}
     - target: {fileID: 3993504749891262219, guid: feed920016ce87648b107ccd1c43522d, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -3038,6 +3069,7 @@ GameObject:
   - component: {fileID: 4945207991241057595}
   - component: {fileID: 8081585445072016303}
   - component: {fileID: 494745402}
+  - component: {fileID: 8081585445072016304}
   m_Layer: 5
   m_Name: Panel
   m_TagString: Untagged
@@ -3205,7 +3237,19 @@ MonoBehaviour:
       m_Calls: []
   OnPress:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 8081585445072016304}
+        m_TargetAssemblyTypeName: TimerButton, Assembly-CSharp
+        m_MethodName: OnDisable
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   OnUnpress:
     m_PersistentCalls:
       m_Calls: []
@@ -3833,6 +3877,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 6041924628656370290}
+        m_TargetAssemblyTypeName: TMPro.TMP_Text, Unity.TextMeshPro
+        m_MethodName: set_text
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: VR
+          m_BoolArgument: 0
+        m_CallState: 2
   OnUntoggle:
     m_PersistentCalls:
       m_Calls:
@@ -3846,6 +3902,18 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 6041924628656370290}
+        m_TargetAssemblyTypeName: TMPro.TMP_Text, Unity.TextMeshPro
+        m_MethodName: set_text
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: AR
           m_BoolArgument: 0
         m_CallState: 2
   m_disableSelectState: 1
@@ -6406,6 +6474,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ShowMaskGraphic: 1
+--- !u!114 &8081585445072016304
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4437780383904063383}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7599588371f70924fa0cc28a51973d22, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ButtonColor: {fileID: 4781518140758156604}
+  timeDisabled: 0.8
 --- !u!114 &8307880317991927845
 MonoBehaviour:
   m_ObjectHideFlags: 0
